@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PLI / RPLI Endowment Assurance Calculator – Amrabera Branch Post Office</title>
+  <meta name="description" content="Estimate bonus and maturity benefit for PLI Santosh and RPLI Gram Santosh Endowment Assurance. Amrabera Branch Post Office, PIN 723127.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ===== HEADER: Post office details ===== -->
+  <header class="site-header">
+    <div class="container">
+      <h1 class="po-name">AMRABERA BRANCH POST OFFICE</h1>
+      <p class="po-line">PIN – 723127 &nbsp;|&nbsp; West Bengal, India</p>
+      <p class="po-line">Contact: <a href="tel:+917602067110">7602067110</a></p>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <section class="intro">
+      <h2>PLI / RPLI Endowment Assurance Calculator</h2>
+      <p>Estimate the bonus and maturity benefit for <strong>PLI Endowment Assurance – Santosh</strong> and <strong>RPLI Endowment Assurance – Gram Santosh</strong>.</p>
+    </section>
+
+    <!-- ===== INPUT FORM ===== -->
+    <section class="card" aria-labelledby="form-heading">
+      <h2 id="form-heading">Enter Details</h2>
+
+      <form id="calc-form" novalidate>
+
+        <div class="field">
+          <label for="scheme">Insurance scheme</label>
+          <select id="scheme" name="scheme">
+            <option value="PLI">PLI Endowment Assurance — Santosh</option>
+            <option value="RPLI">RPLI Endowment Assurance — Gram Santosh</option>
+          </select>
+          <span class="error" id="err-scheme" role="alert"></span>
+        </div>
+
+        <div class="field">
+          <label for="age">Age at entry (completed years)</label>
+          <input type="number" id="age" name="age" inputmode="numeric" min="0" step="1" placeholder="e.g. 30">
+          <small class="hint" id="hint-age"></small>
+          <span class="error" id="err-age" role="alert"></span>
+        </div>
+
+        <div class="field">
+          <label for="sa">Sum assured (₹)</label>
+          <input type="number" id="sa" name="sa" inputmode="numeric" min="0" step="1" placeholder="e.g. 100000">
+          <small class="hint" id="hint-sa"></small>
+          <span class="error" id="err-sa" role="alert"></span>
+        </div>
+
+        <div class="field">
+          <label for="term">Policy term (years)</label>
+          <input type="number" id="term" name="term" inputmode="numeric" min="0" step="1" placeholder="e.g. 20">
+          <small class="hint" id="hint-term"></small>
+          <span class="error" id="err-term" role="alert"></span>
+        </div>
+
+        <div class="field">
+          <label for="freq">Premium payment frequency</label>
+          <select id="freq" name="freq">
+            <option value="monthly">Monthly</option>
+            <option value="quarterly">Quarterly</option>
+            <option value="halfYearly">Half-yearly</option>
+            <option value="yearly">Yearly</option>
+          </select>
+          <span class="error" id="err-freq" role="alert"></span>
+        </div>
+
+        <div class="btn-row">
+          <button type="submit" class="btn btn-primary" id="btn-calc">Calculate</button>
+          <button type="button" class="btn btn-secondary" id="btn-reset">Reset</button>
+        </div>
+      </form>
+    </section>
+
+    <!-- ===== RESULTS ===== -->
+    <section class="card results" id="results" hidden aria-live="polite" aria-labelledby="result-heading">
+      <h2 id="result-heading">Quotation – Estimated Benefits</h2>
+      <p class="quote-date" id="quote-date"></p>
+
+      <h3>Policy Details</h3>
+      <table class="table" id="tbl-details"></table>
+
+      <h3>Bonus &amp; Maturity Estimate</h3>
+      <table class="table" id="tbl-maturity"></table>
+      <p class="note" id="bonus-note"></p>
+
+      <h3>Premium</h3>
+      <div id="premium-box"></div>
+
+      <div class="btn-row no-print">
+        <button type="button" class="btn btn-primary" id="btn-compare">Compare PLI vs RPLI</button>
+        <button type="button" class="btn btn-secondary" id="btn-print">Print / Save as PDF</button>
+        <button type="button" class="btn btn-whatsapp" id="btn-whatsapp">Share on WhatsApp</button>
+      </div>
+    </section>
+
+    <!-- ===== COMPARISON ===== -->
+    <section class="card" id="compare-card" hidden aria-labelledby="compare-heading">
+      <h2 id="compare-heading">PLI vs RPLI – Bonus Comparison</h2>
+      <div class="table-wrap">
+        <table class="table" id="tbl-compare"></table>
+      </div>
+      <p class="note">Same sum assured and term used for both schemes. Eligibility rules differ between schemes.</p>
+    </section>
+
+    <!-- ===== RATE NOTICE ===== -->
+    <section class="notice">
+      <strong>Bonus rates used:</strong> PLI ₹52 and RPLI ₹48 per ₹1,000 sum assured per year. These are the rates supplied for this calculator. Verify their applicability against the latest official bonus declaration before public use.
+    </section>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-footer">
+    <div class="container">
+      <p class="footer-name">AMRABERA BRANCH POST OFFICE</p>
+      <p>PIN – 723127</p>
+      <p>Contact: <a href="tel:+917602067110">7602067110</a></p>
+      <p class="disclaimer">
+        This calculator provides indicative estimates for customer awareness. Bonus rates may change according to official declarations. Premiums, eligibility, and actual maturity benefits are governed by applicable PLI/RPLI rules and policy conditions. Please confirm all figures with the competent postal insurance authority before making a financial decision.
+      </p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

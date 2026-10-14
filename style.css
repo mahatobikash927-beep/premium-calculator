@@ -1,0 +1,172 @@
+/* =========================================================
+   PLI/RPLI Calculator – Amrabera Branch Post Office
+   Mobile-first. Palette: deep red, white, cream, light grey.
+   ========================================================= */
+
+:root {
+  --red: #9b1c1c;
+  --red-dark: #741212;
+  --cream: #fff8e8;
+  --grey: #f1f1f1;
+  --grey-border: #d6d6d6;
+  --text: #222;
+  --white: #fff;
+  --green: #1f7a3d;
+  --radius: 10px;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--text);
+  background: var(--cream);
+}
+
+.container { width: 100%; max-width: 820px; margin: 0 auto; padding: 0 14px; }
+
+a { color: inherit; }
+
+/* ---------- Header ---------- */
+.site-header {
+  background: var(--red);
+  color: var(--white);
+  text-align: center;
+  padding: 18px 0;
+  border-bottom: 5px solid var(--red-dark);
+}
+.po-name { margin: 0 0 4px; font-size: 1.35rem; letter-spacing: 0.5px; }
+.po-line { margin: 2px 0; font-size: 0.98rem; }
+
+/* ---------- Intro ---------- */
+.intro { padding: 18px 0 4px; }
+.intro h2 { color: var(--red); margin: 0 0 6px; font-size: 1.3rem; }
+.intro p { margin: 0; }
+
+/* ---------- Cards ---------- */
+.card {
+  background: var(--white);
+  border: 1px solid var(--grey-border);
+  border-top: 4px solid var(--red);
+  border-radius: var(--radius);
+  padding: 16px;
+  margin: 16px 0;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+}
+.card h2 { margin: 0 0 12px; color: var(--red); font-size: 1.2rem; }
+.card h3 { margin: 18px 0 8px; color: var(--red-dark); font-size: 1.05rem; }
+
+/* ---------- Form ---------- */
+.field { margin-bottom: 14px; }
+label { display: block; font-weight: 600; margin-bottom: 5px; }
+
+input, select {
+  width: 100%;
+  padding: 12px;
+  font-size: 1rem;
+  border: 1.5px solid var(--grey-border);
+  border-radius: 8px;
+  background: var(--white);
+  color: var(--text);
+}
+input:focus, select:focus, .btn:focus-visible {
+  outline: 3px solid rgba(155, 28, 28, 0.35);
+  border-color: var(--red);
+}
+input.invalid, select.invalid { border-color: #c0392b; background: #fff3f2; }
+
+.hint { display: block; margin-top: 4px; color: #555; font-size: 0.85rem; }
+.error { display: block; color: #b3261e; font-size: 0.88rem; font-weight: 600; min-height: 0; margin-top: 3px; }
+
+/* ---------- Buttons ---------- */
+.btn-row { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 16px; }
+.btn {
+  flex: 1 1 150px;
+  padding: 13px 16px;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  min-height: 46px;
+}
+.btn-primary { background: var(--red); color: var(--white); }
+.btn-primary:hover { background: var(--red-dark); }
+.btn-secondary { background: var(--grey); color: var(--text); border: 1.5px solid var(--grey-border); }
+.btn-secondary:hover { background: #e4e4e4; }
+.btn-whatsapp { background: var(--green); color: var(--white); }
+.btn-whatsapp:hover { background: #17612f; }
+
+/* ---------- Tables ---------- */
+.table-wrap { overflow-x: auto; }
+.table { width: 100%; border-collapse: collapse; font-size: 0.97rem; }
+.table th, .table td { padding: 9px 10px; border-bottom: 1px solid var(--grey-border); text-align: left; vertical-align: top; }
+.table th { background: var(--grey); font-weight: 600; }
+.table td:last-child { text-align: right; font-weight: 600; }
+#tbl-compare td:not(:first-child), #tbl-compare th:not(:first-child) { text-align: right; }
+.table tr.total td, .table tr.total th { background: var(--cream); color: var(--red-dark); font-size: 1.05rem; }
+
+.quote-date { margin: -6px 0 6px; color: #555; font-size: 0.9rem; }
+.note { font-size: 0.88rem; color: #444; background: var(--grey); padding: 8px 10px; border-radius: 6px; margin: 10px 0 0; }
+
+.premium-unavailable {
+  background: #fff3cd;
+  border: 1px solid #e6c65c;
+  color: #6b5200;
+  padding: 10px 12px;
+  border-radius: 8px;
+  font-weight: 600;
+}
+.cell-error { color: #b3261e; font-weight: 600; font-size: 0.9rem; }
+
+.notice {
+  background: var(--white);
+  border-left: 5px solid var(--red);
+  padding: 12px 14px;
+  border-radius: 6px;
+  font-size: 0.92rem;
+  margin: 16px 0 24px;
+}
+
+/* ---------- Footer ---------- */
+.site-footer {
+  background: var(--red-dark);
+  color: var(--white);
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 20px;
+}
+.site-footer p { margin: 3px 0; }
+.footer-name { font-weight: 700; font-size: 1.05rem; }
+.disclaimer {
+  margin-top: 14px !important;
+  font-size: 0.82rem;
+  line-height: 1.5;
+  background: rgba(255,255,255,0.1);
+  padding: 10px 12px;
+  border-radius: 6px;
+  text-align: left;
+}
+
+/* ---------- Larger screens ---------- */
+@media (min-width: 700px) {
+  .po-name { font-size: 1.8rem; }
+  .card { padding: 24px; }
+  .form-grid, #calc-form { display: grid; grid-template-columns: 1fr 1fr; column-gap: 18px; }
+  #calc-form .btn-row { grid-column: 1 / -1; }
+  .btn { flex: 0 1 auto; min-width: 170px; }
+}
+
+/* ---------- Print / Save as PDF ---------- */
+@media print {
+  body { background: #fff; font-size: 12pt; }
+  .no-print, #calc-form, .intro, #btn-calc, .notice { display: none !important; }
+  .card { box-shadow: none; border: 1px solid #999; page-break-inside: avoid; }
+  .site-header, .site-footer { background: #fff !important; color: #000; border: none; }
+  .site-header { border-bottom: 2px solid #000; }
+  .disclaimer { background: none; border: 1px solid #999; color: #000; }
+  .site-footer a, .site-header a { text-decoration: none; }
+}
